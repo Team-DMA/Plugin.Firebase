@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFrameworks>net6.0-android;net6.0-ios</TargetFrameworks>
@@ -12,7 +12,7 @@
 		<ApplicationTitle>Plugin Firebase Integration Tests</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>plugin.firebase.integrationtests</ApplicationId>
+		<ApplicationId>com.dma.highlifeplayground</ApplicationId>
 		<ApplicationIdGuid>06C3A02E-0965-4D7F-9E22-1902C6448F87</ApplicationIdGuid>
 
 		<!-- Versions -->

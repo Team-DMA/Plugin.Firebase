@@ -1,182 +1,281 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-		<xsd:element name="root" msdata:IsDataSet="true">
-		</xsd:element>
-	</xsd:schema>
-	<resheader name="resmimetype">
-		<value>text/microsoft-resx</value>
-	</resheader>
-	<resheader name="version">
-		<value>1.3</value>
-	</resheader>
-	<resheader name="reader">
-		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<resheader name="writer">
-		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<!-- buttons -->
-	<data name="ButtonAuth">
-		<value>Auth</value>
-	</data>
-	<data name="ButtonCloudMessaging">
-		<value>Cloud Messaging</value>
-	</data>
-	<data name="ButtonRemoteConfig">
-		<value>Remote config</value>
-	</data>
-	<data name="ButtonStorage">
-		<value>Storage</value>
-	</data>
-	<data name="ButtonFetchRemoteConfig">
-		<value>Fetch and activate</value>
-	</data>
-	<data name="ButtonUploadText">
-		<value>Upload text as file</value>
-	</data>
-	<data name="ButtonSignInAnonymously">
-		<value>Sign in anonymously</value>
-	</data>
-	<data name="ButtonSignInWithEmail">
-		<value>Sign in with email</value>
-	</data>
-	<data name="ButtonSignInWithEmailLink">
-		<value>Sign in with email link</value>
-	</data>
-	<data name="ButtonSignInWithGoogle">
-		<value>Sign in with google</value>
-	</data>
-	<data name="ButtonSignInWithFacebook">
-		<value>Sign in with facebook</value>
-	</data>
-	<data name="ButtonSignInWithApple">
-		<value>Sign in with apple</value>
-	</data>
-	<data name="ButtonSignInWithPhoneNumber">
-		<value>Sign in with phone number</value>
-	</data>
-	<data name="ButtonSendVerificationCode">
-		<value>Send verification code</value>
-	</data>
-	<data name="ButtonLinkWithEmail">
-		<value>Link with email</value>
-	</data>
-	<data name="ButtonLinkWithGoogle">
-		<value>Link with google</value>
-	</data>
-	<data name="ButtonLinkWithFacebook">
-		<value>Link with facebook</value>
-	</data>
-	<data name="ButtonLinkWithPhoneNumber">
-		<value>Link with phone number</value>
-	</data>
-	<data name="ButtonUnlinkProvider">
-		<value>Unlink provider</value>
-	</data>
-	<data name="ButtonSignIn">
-		<value>Sign in</value>
-	</data>
-	<data name="ButtonSignOut">
-		<value>Sign out</value>
-	</data>
-	<data name="ButtonCheckFcmValidity">
-		<value>Check validity</value>
-	</data>
-	<data name="ButtonRegisterFcmToken">
-		<value>Register FCM token</value>
-	</data>
-	<data name="ButtonUnregisterFcmToken">
-		<value>Unregister FCM token</value>
-	</data>
-	<data name="ButtonSubscribeToTopic">
-		<value>Subscribe to topic</value>
-	</data>
-	<data name="ButtonUnsubscribeFromTopic">
-		<value>Unsubscribe from topic</value>
-	</data>
-	<data name="ButtonTriggerNotificationViaToken">
-		<value>Trigger notification via token</value>
-	</data>
-	<data name="ButtonTriggerNotificationViaTopic">
-		<value>Trigger notification via topic</value>
-	</data>
-	<data name="ButtonTriggerNotification">
-		<value>Trigger notification</value>
-	</data>
-    <data name="ButtonSendEmailToResetPassword">
-        <value>Reset password by email</value>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
     </data>
-	<!-- labels -->
-	<data name="LabelUserIsSignedIn">
-		<value>You are signed in:
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ButtonAuth" xml:space="preserve">
+    <value>Auth</value>
+  </data>
+  <data name="ButtonCloudMessaging" xml:space="preserve">
+    <value>Cloud Messaging</value>
+  </data>
+  <data name="ButtonRemoteConfig" xml:space="preserve">
+    <value>Remote config</value>
+  </data>
+  <data name="ButtonStorage" xml:space="preserve">
+    <value>Storage</value>
+  </data>
+  <data name="ButtonFetchRemoteConfig" xml:space="preserve">
+    <value>Fetch and activate</value>
+  </data>
+  <data name="ButtonUploadText" xml:space="preserve">
+    <value>Upload text as file</value>
+  </data>
+  <data name="ButtonSignInAnonymously" xml:space="preserve">
+    <value>Sign in anonymously</value>
+  </data>
+  <data name="ButtonSignInWithEmail" xml:space="preserve">
+    <value>Sign in with email</value>
+  </data>
+  <data name="ButtonSignInWithEmailLink" xml:space="preserve">
+    <value>Sign in with email link</value>
+  </data>
+  <data name="ButtonSignInWithGoogle" xml:space="preserve">
+    <value>Sign in with google</value>
+  </data>
+  <data name="ButtonSignInWithFacebook" xml:space="preserve">
+    <value>Sign in with facebook</value>
+  </data>
+  <data name="ButtonSignInWithApple" xml:space="preserve">
+    <value>Sign in with apple</value>
+  </data>
+  <data name="ButtonSignInWithPhoneNumber" xml:space="preserve">
+    <value>Sign in with phone number</value>
+  </data>
+  <data name="ButtonSendVerificationCode" xml:space="preserve">
+    <value>Send verification code</value>
+  </data>
+  <data name="ButtonLinkWithEmail" xml:space="preserve">
+    <value>Link with email</value>
+  </data>
+  <data name="ButtonLinkWithGoogle" xml:space="preserve">
+    <value>Link with google</value>
+  </data>
+  <data name="ButtonLinkWithFacebook" xml:space="preserve">
+    <value>Link with facebook</value>
+  </data>
+  <data name="ButtonLinkWithPhoneNumber" xml:space="preserve">
+    <value>Link with phone number</value>
+  </data>
+  <data name="ButtonUnlinkProvider" xml:space="preserve">
+    <value>Unlink provider</value>
+  </data>
+  <data name="ButtonSignIn" xml:space="preserve">
+    <value>Sign in</value>
+  </data>
+  <data name="ButtonSignOut" xml:space="preserve">
+    <value>Sign out</value>
+  </data>
+  <data name="ButtonCheckFcmValidity" xml:space="preserve">
+    <value>Check validity</value>
+  </data>
+  <data name="ButtonRegisterFcmToken" xml:space="preserve">
+    <value>Register FCM token</value>
+  </data>
+  <data name="ButtonUnregisterFcmToken" xml:space="preserve">
+    <value>Unregister FCM token</value>
+  </data>
+  <data name="ButtonSubscribeToTopic" xml:space="preserve">
+    <value>Subscribe to topic</value>
+  </data>
+  <data name="ButtonUnsubscribeFromTopic" xml:space="preserve">
+    <value>Unsubscribe from topic</value>
+  </data>
+  <data name="ButtonTriggerNotificationViaToken" xml:space="preserve">
+    <value>Trigger notification via token</value>
+  </data>
+  <data name="ButtonTriggerNotificationViaTopic" xml:space="preserve">
+    <value>Trigger notification via topic</value>
+  </data>
+  <data name="ButtonTriggerNotification" xml:space="preserve">
+    <value>Trigger notification</value>
+  </data>
+  <data name="ButtonSendEmailToResetPassword" xml:space="preserve">
+    <value>Reset password by email</value>
+  </data>
+  <data name="LabelUserIsSignedIn" xml:space="preserve">
+    <value>You are signed in:
         Email: %1$s
         Method: %2$s</value>
-	</data>
-	<data name="LabelUserIsSignedInWithoutEmail">
-		<value>You are signed in without using an email address</value>
-	</data>
-	<data name="LabelUserIsSignedOut">
-		<value>You are signed out</value>
-	</data>
-	<!-- entry placeholders -->
-	<data name="EntryPlaceholderStorage">
-		<value>Enter text for upload</value>
-	</data>
-	<!-- alerts -->
-	<data name="DialogTitleUnexpectedError">
-		<value>Unexpected Error</value>
-	</data>
-	<data name="DialogMessageEnterEmail">
-		<value>Enter your email address</value>
-	</data>
-	<data name="DialogMessageEnterPassword">
-		<value>Enter your password</value>
-	</data>
-	<data name="DialogMessageEnterPhoneNumber">
-		<value>Enter your phone number so Firebase can send a verification code</value>
-	</data>
-	<data name="DialogMessageEnterVerificationCode">
-		<value>Enter the verification code</value>
-	</data>
-	<data name="DialogTitleSignInLinkSent">
-		<value>Login link sent</value>
-	</data>
-	<data name="DialogMessageSignInLinkSent">
-		<value>Please check your inbox, we've sent a login link to your email address. Tap on the link to get signed in automatically.</value>
-	</data>
-	<data name="DialogTitleUnlinkProvider">
-		<value>Unlink provider</value>
-	</data>
-	<data name="DialogMessageUnlinkProvider">
-		<value>Please select the provider you want to unlink</value>
-	</data>
-	<data name="DialogTitleCloudMessaging">
-		<value>Cloud messaging</value>
-	</data>
-	<data name="DialogMessageFcmValid">
-		<value>The validity check was successful</value>
-	</data>
-	<data name="DialogMessageEnterTopic">
-		<value>Enter the name of the topic</value>
-	</data>
-	<data name="DialogMessageEnterCloudMessageBody">
-		<value>Enter some message you want to receive</value>
-	</data>
-    <data name="DialogTitlePasswordResetSuccessful">
-        <value>Password reset</value>
-    </data>
-    <data name="DialogMessagePasswordResetSuccessful">
-        <value>You should've received an email with a link to reset your password, check out your email inbox.</value>
-    </data>
-	<!-- common -->
-	<data name="Ok">
-		<value>OK</value>
-	</data>
-	<data name="Continue">
-		<value>Continue</value>
-	</data>
-	<data name="Cancel">
-		<value>Cancel</value>
-	</data>
+  </data>
+  <data name="LabelUserIsSignedInWithoutEmail" xml:space="preserve">
+    <value>You are signed in without using an email address</value>
+  </data>
+  <data name="LabelUserIsSignedOut" xml:space="preserve">
+    <value>You are signed out</value>
+  </data>
+  <data name="EntryPlaceholderStorage" xml:space="preserve">
+    <value>Enter text for upload</value>
+  </data>
+  <data name="DialogTitleUnexpectedError" xml:space="preserve">
+    <value>Unexpected Error</value>
+  </data>
+  <data name="DialogMessageEnterEmail" xml:space="preserve">
+    <value>Enter your email address</value>
+  </data>
+  <data name="DialogMessageEnterPassword" xml:space="preserve">
+    <value>Enter your password</value>
+  </data>
+  <data name="DialogMessageEnterPhoneNumber" xml:space="preserve">
+    <value>Enter your phone number so Firebase can send a verification code</value>
+  </data>
+  <data name="DialogMessageEnterVerificationCode" xml:space="preserve">
+    <value>Enter the verification code</value>
+  </data>
+  <data name="DialogTitleSignInLinkSent" xml:space="preserve">
+    <value>Login link sent</value>
+  </data>
+  <data name="DialogMessageSignInLinkSent" xml:space="preserve">
+    <value>Please check your inbox, we've sent a login link to your email address. Tap on the link to get signed in automatically.</value>
+  </data>
+  <data name="DialogTitleUnlinkProvider" xml:space="preserve">
+    <value>Unlink provider</value>
+  </data>
+  <data name="DialogMessageUnlinkProvider" xml:space="preserve">
+    <value>Please select the provider you want to unlink</value>
+  </data>
+  <data name="DialogTitleCloudMessaging" xml:space="preserve">
+    <value>Cloud messaging</value>
+  </data>
+  <data name="DialogMessageFcmValid" xml:space="preserve">
+    <value>The validity check was successful</value>
+  </data>
+  <data name="DialogMessageEnterTopic" xml:space="preserve">
+    <value>Enter the name of the topic</value>
+  </data>
+  <data name="DialogMessageEnterCloudMessageBody" xml:space="preserve">
+    <value>Enter some message you want to receive</value>
+  </data>
+  <data name="DialogTitlePasswordResetSuccessful" xml:space="preserve">
+    <value>Password reset</value>
+  </data>
+  <data name="DialogMessagePasswordResetSuccessful" xml:space="preserve">
+    <value>You should've received an email with a link to reset your password, check out your email inbox.</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ButtonReloadUser" xml:space="preserve">
+    <value>Reload user</value>
+  </data>
 </root>

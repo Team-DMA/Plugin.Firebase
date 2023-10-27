@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFrameworks>net6.0-android;net6.0-ios</TargetFrameworks>
@@ -11,7 +11,7 @@
 		<ApplicationTitle>Playground</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.tobishiba.playground</ApplicationId>
+		<ApplicationId>com.dma.highlifeplayground</ApplicationId>
 		<ApplicationIdGuid>8C7351FF-90F1-489B-B344-9F710B368816</ApplicationIdGuid>
 
 		<!-- Versions -->
@@ -68,6 +68,7 @@
         <PackageReference Include="ReactiveUI" Version="18.3.1" />
         <PackageReference Include="ReactiveUI.Fody" Version="18.3.1" />
         <PackageReference Include="ReactiveUI.Maui" Version="18.3.1" />
+        <PackageReference Include="Xamarin.Build.Download" Version="0.11.4" />
     </ItemGroup>
 
     <ItemGroup Condition="'$(TargetFramework)' == 'net6.0-ios'">

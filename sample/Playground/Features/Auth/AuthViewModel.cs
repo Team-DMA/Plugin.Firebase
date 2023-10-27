@@ -36,6 +36,7 @@ public sealed class AuthViewModel : ViewModelBase
         SignInWithFacebookCommand = ReactiveCommand.CreateFromObservable(SignInWithFacebook, canSignIn);
         SignInWithAppleCommand = ReactiveCommand.CreateFromObservable(SignInWithApple, canSignIn);
         SignInWithPhoneNumberCommand = ReactiveCommand.CreateFromObservable(SignInWithPhoneNumber, canSignIn);
+        ReloadUserCommand = ReactiveCommand.CreateFromTask(ReloadUser);
         LinkWithEmailCommand = ReactiveCommand.CreateFromTask(LinkWithEmailAsync);
         LinkWithGoogleCommand = ReactiveCommand.CreateFromObservable(LinkWithGoogle);
         LinkWithFacebookCommand = ReactiveCommand.CreateFromObservable(LinkWithFacebook);
@@ -53,6 +54,7 @@ public sealed class AuthViewModel : ViewModelBase
                 SignInWithFacebookCommand.ThrownExceptions,
                 SignInWithAppleCommand.ThrownExceptions,
                 SignInWithPhoneNumberCommand.ThrownExceptions,
+                ReloadUserCommand.ThrownExceptions,
                 LinkWithEmailCommand.ThrownExceptions,
                 LinkWithGoogleCommand.ThrownExceptions,
                 LinkWithFacebookCommand.ThrownExceptions,
@@ -166,6 +168,12 @@ public sealed class AuthViewModel : ViewModelBase
             .WithCancelButton(Localization.Cancel)
             .Build());
     }
+
+    private async Task ReloadUser()
+    {
+        await _authService.CurrentUser.ReloadAsync();
+    }
+
 
     private async Task LinkWithEmailAsync()
     {
@@ -337,6 +345,7 @@ public sealed class AuthViewModel : ViewModelBase
     public ReactiveCommand<Unit, Unit> SignInWithFacebookCommand { get; set; }
     public ReactiveCommand<Unit, Unit> SignInWithAppleCommand { get; set; }
     public ReactiveCommand<Unit, Unit> SignInWithPhoneNumberCommand { get; set; }
+    public ReactiveCommand<Unit, Unit> ReloadUserCommand { get; set; }
     public ReactiveCommand<Unit, Unit> LinkWithEmailCommand { get; set; }
     public ReactiveCommand<Unit, Unit> LinkWithGoogleCommand { get; set; }
     public ReactiveCommand<Unit, Unit> LinkWithFacebookCommand { get; set; }

@@ -61,6 +61,12 @@ public interface IFirebaseUser
     Task<IAuthTokenResult> GetIdTokenResultAsync(bool forceRefresh = false);
 
     /// <summary>
+    /// Reloads the User
+    /// </summary>
+    /// <returns></returns>
+    Task ReloadAsync();
+
+    /// <summary>
     /// Returns a string used to uniquely identify your user in your Firebase project's user database. 
     /// </summary>
     string Uid { get; }

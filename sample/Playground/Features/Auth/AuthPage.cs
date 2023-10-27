@@ -83,6 +83,9 @@ public sealed class AuthPage : ContentPageBase
         return new VerticalStackLayout {
             Spacing = 4,
             Children = {
+                 new Button { Text = Localization.ButtonReloadUser }
+                    .FillHorizontal()
+                    .Bind(nameof(Vm.ReloadUserCommand)),
                 new Button { Text = Localization.ButtonLinkWithEmail }
                     .FillHorizontal()
                     .Bind(nameof(Vm.LinkWithEmailCommand)),

@@ -68,6 +68,11 @@ public sealed class FirebaseUserWrapper : IFirebaseUser
         return result.ToAbstract();
     }
 
+    public Task ReloadAsync()
+    {
+        return _wrapped.ReloadAsync();
+    }
+
     public string Uid => _wrapped.Uid;
     public string DisplayName => _wrapped.DisplayName;
     public string Email => _wrapped.Email;
