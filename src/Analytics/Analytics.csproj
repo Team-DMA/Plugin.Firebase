@@ -20,7 +20,7 @@
 
         <!--Assembly and Namespace info -->
         <PackageId>Plugin.Firebase.Analytics</PackageId>
-        <PackageVersion>2.0.1</PackageVersion>
+        <PackageVersion>2.0.2</PackageVersion>
 
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/TobiasBuchholz/Plugin.Firebase</PackageProjectUrl>
@@ -77,7 +77,7 @@
 
     <!-- nuget packages -->
     <ItemGroup Condition="'$(TargetFramework)' == 'net6.0-android'">
-        <PackageReference Include="Xamarin.Firebase.Analytics" Version="121.1.1" />
+        <PackageReference Include="Xamarin.Firebase.Analytics" Version="121.3.0.3" />
     </ItemGroup>
 
     <ItemGroup Condition="'$(TargetFramework)' == 'net6.0-ios'">
