@@ -64,7 +64,44 @@ Firebase Cloud Messaging offers a broad range of messaging options and capabilit
       FirebaseCloudMessagingImplementation.ChannelId = channelId;
   }
 ```
-- For more specific instructions take a look at the official [Firebase documentation](https://firebase.google.com/docs/cloud-messaging/android/client?hl=en)
+
+#### Customize local push notifications
+Local push notifications are shown by default in a specific way, but you have the following two options to customize this behavior:
+
+##### Overriding `FirebaseCloudMessagingImplementation.NotificationBuilderProvider`:
+
+```c#
+FirebaseCloudMessagingImplementation.NotificationBuilderProvider = notificaion => new NotificationCompat.Builder(context, channelId)
+    .SetSmallIcon(Android.Resource.Drawable.SymDefAppIcon)
+    .SetContentTitle(notification.Title)
+    .SetContentText(notification.Body)
+    .SetPriority(NotificationCompat.PriorityDefault)
+    .SetAutoCancel(true);
+```
+
+##### Setting `FirebaseCloudMessagingImplementation.ShowLocalNotificationAction`:
+
+```c#
+FirebaseCloudMessagingImplementation.ShowLocalNotificationAction = notification => {
+
+    var intent = PackageManager.GetLaunchIntentForPackage(PackageName);
+    intent.PutExtra(FirebaseCloudMessagingImplementation.IntentKeyFCMNotification, notification.ToBundle());
+    intent.SetFlags(ActivityFlags.ClearTop | ActivityFlags.SingleTop);
+
+    var pendingIntent = PendingIntent.GetActivity(context, 0, intent, PendingIntentFlags.Immutable | PendingIntentFlags.UpdateCurrent);
+    var builder = new NotificationCompat.Builder(context, channelId)
+        .SetSmallIcon(Android.Resource.Drawable.SymDefAppIcon)
+        .SetContentTitle(notification.Title)
+        .SetContentText(notification.Body)
+        .SetPriority(NotificationCompat.PriorityDefault)
+        .SetAutoCancel(true);
+
+    var notificationManager = (NotificationManager) GetSystemService(NotificationService);
+    notificationManager.Notify(123, builder.SetContentIntent(pendingIntent).Build());
+};
+```
+
+You can find more specific instructions for android at the official [Firebase documentation](https://firebase.google.com/docs/cloud-messaging/android/client?hl=en)
 
 ## Usage
 
@@ -106,6 +143,8 @@ curl --location 'https://fcm.googleapis.com/fcm/send' \
 If you are having trouble receiving push notifications on your device, take a look at this helpful https://github.com/TobiasBuchholz/Plugin.Firebase/issues/145#issuecomment-1455182588 by @andyzukunft. Additionally he has created a dedicated project to simplify the demonstration on how Firebase Cloud Messaging works: https://github.com/andyzukunft/Plugin.Firebase/tree/fcm-demo/sample/Fcm
 
 ## Release notes
+- Version 2.0.4
+  - Add FirebaseCloudMessagingImplementation.ShowLocalNotificationAction (issue #163)
 - Version 2.0.3
   - Enable silent push notifications when the app is in foreground (PR #188)
 - Version 2.0.2
